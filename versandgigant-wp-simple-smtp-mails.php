@@ -71,7 +71,7 @@ class VG_WP_Simple_SMTP_Emails {
 			( defined( 'SMTP_REPLYTO' ) && SMTP_REPLYTO !== ''
 				&&
 			  defined( 'SMTP_REPLYTO_NAME' ) && SMTP_REPLYTO_NAME !== '' ) ? 
-					$phpmailer->AddReplyTo(SMTP_ADD_REPLYTO_EMAIL, SMTP_ADD_REPLYTO_NAME) : ''; // Set alternative ReplyTo Field
+					$phpmailer->AddReplyTo(SMTP_REPLYTO, SMTP_REPLYTO_NAME) : ''; // Set alternative ReplyTo Field
 
 			$phpmailer->SMTPDebug = SMTP_DEBUG;      // debug level, 1, 2 or 0
 		}
